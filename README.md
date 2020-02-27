@@ -30,12 +30,12 @@ You can get any ldaps ssl certificate by using OpenSSL: openssl s_client -connec
 
 Please note some users reported that on recent Zimbra versions you must use a DNS domain name to connect to the AD server, using IP addresses no longer works and is not secure SSL/TLS.
 
-## Installation via the cli
+## Installation via the cli (jar url fixed)
 
 Review your LDAP configuration in the commands below and then copy-paste them:
 
       mkdir -p /opt/zimbra/lib/ext/adpassword
-      wget https://github.com/Zimbra-Community/ADPassword/raw/master/out/artifacts/ADPassword_jar/ADPassword.jar -O /opt/zimbra/lib/ext/adpassword/adPassword.jar 
+      wget https://github.com/damned-trooper/ADPassword/raw/master/out/artifacts/ADPassword_jar/ADPassword.jar -O /opt/zimbra/lib/ext/adpassword/adPassword.jar 
       su zimbra
       zmprov md domain.ext zimbraAuthLdapBindDn "%u@domain.ext"
       zmprov md domain.ext zimbraAuthLdapSearchBase "CN=Users,DC=DOMAIN,DC=EXT"
@@ -91,3 +91,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+## Fork reason
+Original code used binding to samAccountName. In some cases sanAccountName maybe different with login. This fork use userPrincipalName in ldap filter.
