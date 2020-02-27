@@ -4,11 +4,10 @@
     <list default="true" id="292f8a2a-2ec8-4016-952e-8fe2e86df575" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ADPassword_jar/ADPassword.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ADPassword_jar/ADPassword.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADChangePasswordListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADChangePasswordListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADPassword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/iknowconsulting/adpassword/ADChangePasswordListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/iknowconsulting/adpassword/ADChangePasswordListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADChangePasswordListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ADPassword/it/iknowconsulting/adpassword/ADPassword.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/iknowconsulting/adpassword/ADConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/iknowconsulting/adpassword/ADConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +29,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562139263767" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -101,9 +101,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="443" y="101" width="1036" height="848" key="SettingsEditor" timestamp="1577448734984">
-      <screen x="0" y="0" width="1920" height="1049" />
+    <state x="235" y="188" width="802" height="678" key="#Project_Structure" timestamp="1582805574616">
+      <screen x="0" y="25" width="1280" height="999" />
+    </state>
+    <state x="235" y="188" width="802" height="678" key="#Project_Structure/0.25.1280.999/1280.0.1280.1024@0.25.1280.999" timestamp="1582805574616" />
+    <state x="246" y="121" width="1026" height="846" key="SettingsEditor" timestamp="1582805627712">
+      <screen x="0" y="25" width="1280" height="999" />
     </state>
     <state x="443" y="101" width="1036" height="848" key="SettingsEditor/0.0.1920.1049/1920.12.1920.1080@0.0.1920.1049" timestamp="1577448734984" />
+    <state x="246" y="121" width="1026" height="846" key="SettingsEditor/0.25.1280.999/1280.0.1280.1024@0.25.1280.999" timestamp="1582805627712" />
   </component>
 </project>

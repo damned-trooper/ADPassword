@@ -50,7 +50,6 @@ public class ADConnection {
         String authLdapSearchBindDn = domain.getAuthLdapSearchBindDn();
         String authLdapSearchBindPassword = domain.getAuthLdapSearchBindPassword();
         authLdapSearchBase = domain.getAuthLdapSearchBase();
-        authLdapSearchFilter = domain.getAuthLdapSearchFilter();
 
         Hashtable ldapEnv = new Hashtable(11);
         ldapEnv.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
@@ -63,7 +62,7 @@ public class ADConnection {
     }
 
     public void updatePassword(Account acct, String password) throws NamingException {
-        String username = acct.getUid();
+        String usrMail = acct.getMail();
         String quotedPassword = "\"" + password + "\"";
         char unicodePwd[] = quotedPassword.toCharArray();
         byte pwdArray[] = new byte[unicodePwd.length * 2];
@@ -81,24 +80,18 @@ public class ADConnection {
         }
         else
         {
-            System.out.print("ADPassword->ADConnection->updatePassword->username: "+ username);
-            System.out.print("ADPassword->ADConnection->updatePassword->fetchUser(username): "+ fetchUser(username));
-            System.out.print("ADPassword->ADConnection->updatePassword->mods: "+ mods);
-            ldapContext.modifyAttributes(fetchUser(username), mods);
+            ldapContext.modifyAttributes(fetchUser(usrMail), mods);
         }
     }
 
-    String fetchUser(String username) throws NamingException {
+    String fetchUser(String usrMail) throws NamingException {
         String returnedAttrs[]={"dn"};
         SearchControls searchControls = new SearchControls();
         searchControls.setSearchScope(SearchControls.SUBTREE_SCOPE);
         searchControls.setReturningAttributes(returnedAttrs);
-        String searchFilter = authLdapSearchFilter.replace("%u",username);
-        System.out.print("ADPassword->ADConnection->fetchUser->searchFilter: "+ searchFilter);
+        String searchFilter = "(userPrincipalName=" + usrMail + ")";
         NamingEnumeration results = ldapContext.search(authLdapSearchBase, searchFilter, searchControls);
-          
         SearchResult sr = (SearchResult) results.next();
-        System.out.print("ADPassword->ADConnection->fetchUser->getNameInNamespace: "+ sr.getNameInNamespace());
-        return sr.getNameInNamespace();              
+        return sr.getNameInNamespace();
     }
 }
