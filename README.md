@@ -93,4 +93,4 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ## Fork reason
-Original code used binding to samAccountName. In some cases sanAccountName maybe different with login. This fork use userPrincipalName in ldap filter.
+Original code used binding to samAccountName. In some cases samAccountName maybe different from login. This fork use userPrincipalName in ldap filter.
